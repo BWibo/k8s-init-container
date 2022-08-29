@@ -15,14 +15,24 @@
 
 ## :rocket: Usage
 
-### Interactive usage
+### Get the image
 
-The image is available from [dockerhub/bwibo](https://hub.docker.com/repository/docker/bwibo):
+The image is available from [Dockerhub](https://hub.docker.com/repository/docker/bwibo/k8s-init-container):
 
 ```shell
 docker pull bwibo/k8s-init-container
+```
 
+### Example interactive mode
+
+```shell
 docker run -i -t --rm --name init bwibo/k8s-init-container
+```
+
+### Example execute a command
+
+```shell
+docker run -i -t --rm --name init bwibo/k8s-init-container -c 'echo "Hello world"'
 ```
 
 ### k8s initContainer example
@@ -32,3 +42,17 @@ docker run -i -t --rm --name init bwibo/k8s-init-container
 To BE DONE
 
 ```
+
+## :hammer_and_wrench: Contributing
+
+Bug fixes, issue reports and contributions are greatly appreciated.
+
+### Contributors
+
+<a href="https://github.com/twpayne/chezmoi/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bwibo/k8s-init-container" />
+</a>
+
+## :memo: License
+
+This Helm chart is distributed under the Apache License 2.0. See [LICENSE](LICENSE) for more information.
