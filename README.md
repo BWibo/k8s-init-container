@@ -38,7 +38,6 @@ docker run -i -t --rm --name init bwibo/k8s-init-container 'echo "Hello world"'
 ### k8s initContainer example
 
 ```yaml
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -84,7 +83,6 @@ spec:
             - name: share
               mountPath: /var/www/html/test.html
               subPath: test.html
-
 ```
 
 ## :hammer_and_wrench: Contributing
