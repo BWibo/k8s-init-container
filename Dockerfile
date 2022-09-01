@@ -17,7 +17,7 @@ RUN set -ex && \
   echo 'alias lla="ls -laFh --group-directories-first  --color=auto"' >> ~/.bashrc && \
   rm -rf /tmp/*
 
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/bin/bash", "-c"]
 
 # Labels ######################################################################
 LABEL maintainer="Bruno Willenborg"
