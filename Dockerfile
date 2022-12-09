@@ -1,4 +1,4 @@
-ARG BASEIMAGE_TAG='3.16'
+ARG BASEIMAGE_TAG='3.17'
 
 FROM alpine:${BASEIMAGE_TAG}
 
@@ -7,9 +7,10 @@ RUN set -ex && \
   apk add --no-cache --virtual .runtime-deps \
     --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
     bash \
-    git \
     curl \
-    p7zip && \
+    git \
+    p7zip \
+    postgresql-client && \
   echo 'shopt -s globstar' >> ~/.bashrc && \
   echo 'alias ..="cd .."' >> ~/.bashrc && \
   echo 'alias l="ls -CF --group-directories-first --color=auto"' >> ~/.bashrc && \

@@ -9,9 +9,10 @@
 
 * bash
 * curl
-* wget
 * git
+* wget
 * p7zip
+* postgressql-client (psql)
 
 ## :rocket: Usage
 
@@ -83,6 +84,13 @@ spec:
             - name: share
               mountPath: /var/www/html/test.html
               subPath: test.html
+```
+
+## Build the image
+
+```bash
+docker build -t bwibo/k8s-init-container .
+docker push bwibo/k8s-init-container
 ```
 
 ## :hammer_and_wrench: Contributing
