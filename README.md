@@ -86,6 +86,33 @@ spec:
               subPath: test.html
 ```
 
+### Postgres database examples
+
+#### `pg_isready` init container
+
+```yaml
+initContainers:
+- name: db
+  image: bwibo/k8s-init-container
+  securityContext:
+    runAsUser: 0
+    runAsGroup: 0
+  env:
+    - name: PGHOST
+      value: {{ .Values.database.host | quote }}
+    - name: PGPORT
+      value: {{ .Values.database.port | quote }}
+    # - name: PGDATABASE
+    #   value: {{ .Values.database.database | quote }}
+    - name: PGUSER
+      value: {{ .Values.database.auth.username | quote }}
+    - name: PGPASSWORD
+      value: {{ .Values.database.auth.password | quote }}
+  command:
+    - pg_isready
+
+```
+
 ## Build the image
 
 ```bash
