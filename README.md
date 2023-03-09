@@ -12,7 +12,7 @@
 * git
 * wget
 * p7zip
-* postgressql-client (psql)
+* postgresql-client (psql)
 
 ## :rocket: Usage
 
